@@ -77,7 +77,7 @@ def cmpe_req_courses : Finset Course := {
   engr_10,
   ee_97,
   ee_98,
-  cmpe_102,
+  cmpe_70,
   cmpe_110,
   cmpe_124,
   cmpe_125,

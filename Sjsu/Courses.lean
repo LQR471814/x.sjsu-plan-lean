@@ -74,7 +74,7 @@ def ee_198b : Course := { name := "EE 198B", units := 3 }
 
 def cmpe_30 : Course := { name := "CMPE 30", units := 3 }
 def cmpe_50 : Course := { name := "CMPE 50", units := 3 }
-def cmpe_102 : Course := { name := "CMPE 102", units := 3 }
+def cmpe_70 : Course := { name := "CMPE 70", units := 3 }
 def cmpe_110 : Course := { name := "CMPE 110", units := 3 }
 def cmpe_124 : Course := { name := "CMPE 124", units := 3 }
 def cmpe_125 : Course := { name := "CMPE 125", units := 3 }

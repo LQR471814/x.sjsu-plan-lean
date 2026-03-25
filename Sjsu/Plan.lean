@@ -56,7 +56,7 @@ def spring_26 : Finset CourseRegistration :=
 def fall_26 : Finset CourseRegistration :=
   courses_taken fall_2026 {
     math_32,
-    cmpe_102,
+    cmpe_70,
     cmpe_110,
     cmpe_124,
     cmpe_126,
