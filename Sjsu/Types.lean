@@ -24,6 +24,7 @@ structure Course where
 structure Semester where
   name : String
   unit_capacity : Nat
+  idx : Nat
   deriving DecidableEq
 
 structure CourseRegistration where
@@ -40,5 +41,5 @@ def add (r : CourseRegistration) (p : Plan) : Plan :=
   { p with taken := insert r p.taken }
 
 def get_course (r : CourseRegistration) := r.course
-def unwrap_reg_courses (sr : Finset CourseRegistration) : Finset Course :=
+def course_regs (sr : Finset CourseRegistration) : Finset Course :=
   Finset.image get_course sr
