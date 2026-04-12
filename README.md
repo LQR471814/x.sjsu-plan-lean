@@ -1,26 +1,24 @@
 # SJSU Academic Plan (Lean)
 
-Often is the case graduation requirements for many universities
-are effectively a long list of potentially logical predicates of
-non-uniform structure.
+Graduation requirements for many universities are often a long
+list of logical predicates of non-uniform structure.
 
-Due to the complexity of academic policy, there exists a
-meaningful gap between the academic plans policy allows for and
-the actual plans students will make. This is supposedly where
-academic advisors, experts on policy, come in, but advisors are
-frequently stretched thin during course registration times
-precisely due to the complexity of policy.
+Due to the complexity of academic policy, there may exist a
+meaningful gap between what school policy allows for and the
+actual plans students make. This is supposedly where academic
+advisors, experts on policy, come in, but advisors are frequently
+stretched thin during course registration times.
 
 As such, one may think of building an automated policy-based
-checking program to help the student build their academic plan and
-to catch errors before they happen. However, there is a reason why
+checking program to help a student build their academic plan and
+to catch errors before they happen. However, there is reason why
 these programs are not more widespread, and that is largely due to
 the fact that academic policy contains many "edge-case"
-structures. See the following:
+structures. Consider the following:
 
 It may be tempting to model the pre-requisites and co-requisites
-of a course as simple sets of courses. However, then you may end
-up with a line in the course catalog stating:
+of a course as simple sets of courses. However, you may end up
+finding a line in the course catalog like:
 
 > CMPE major: CMPE 126 (C- or better); SE major: CS 46B (C- or
 > better); other majors: CMPE 30, and MATH 32 or MATH 32H (C- or
@@ -30,12 +28,13 @@ up with a line in the course catalog stating:
 
 Here, there are multiple ways you can fulfill the pre-requisites
 for this class, and in particular, these ways involve the checking
-    the grade of the class involved! In most cases you can re-use
-    the logic for checking pre-requisites, but not in this
-    particular case, which often means that you must restructure
-    your program to be more flexible.
+    the grade of the class involved! In most cases the logic for
+    checking pre-requisites is the same, but not always. This
+    means that attempting to structure your program around a few
+    common patterns will almost certainly lead to edge cases in
+    which the human must get involved.
 
-Or something like:
+Here is another example:
 
 > You must fulfill 9 units of upper-division general-ed courses
 > ... These are: UD 2 or 5, UD 3, and UD 4. ... Students must
@@ -45,20 +44,29 @@ Or something like:
 
 Notice how it specifically says that students must complete 1,
 3-unit course in each category, and *not* that students must have
-at least 3-units of credit. If you were to naively assume that the
-checking of units is just a matter of finding the courses taken in
-a category, finding the total number of units and checking if it
-passes a threshold, one would be blind-sided by this example.
+at least 3-units of credit. If you were to naively assume that
+checking unit requirements is just a matter of finding the sum of
+the course units taken in a category and comparing it to a
+threshold, one would be blind-sided by this example.
 
-In any case, it seems like it is more suitable to model these
-requirements with logic and mathematics than it is with code. In
-particular, representing a particular academic plan as a structure
-which logical predicates can be checked against. This can be done
-with [Lean](https://lean-lang.org/).
+In any case, due to the flexibility of the logic involved. It
+seems like it is more suitable to model these requirements with a
+more flexible formal language rather than trying to model the
+requirements and be stuck perpetually refactoring with every edge
+case.
+
+[Lean](https://lean-lang.org/) is a good choice for this.
+Originally used as a theorem checker and proof assistant, it is
+also remarkably good at modelling arbitrary mathematics and
+logic.
+
+This project aims to provide a simple demonstration of the use of
+formal methods to solve bureaucratic problems in a relatively
+simple and efficient way.
 
 > [!NOTE]
-> This project in particular is purely meant for personal use and
-> does not make any significant attempt to be SJSU or
+> This project is purely meant for personal and educational
+> purposes and does not make any significant attempt to be SJSU or
 > campus-generic.
 
 ## WIP
