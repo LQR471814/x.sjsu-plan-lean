@@ -55,46 +55,42 @@ def spring_26 : Finset CourseRegistration :=
 
 def fall_26 : Finset CourseRegistration :=
   courses_taken fall_2026 {
+    engl_1b,
     math_32,
     cmpe_70,
     cmpe_110,
-    cmpe_124,
-    cmpe_126,
-    engl_1b
+    -- cmpe_124,
+    cmpe_126
   }
 
 def spring_27 : Finset CourseRegistration :=
   courses_taken spring_2027 {
     cmpe_125,
-    cmpe_127,
-    cmpe_130,
+    -- cmpe_130,
     cmpe_131,
-    cmpe_148,
-    hist_50
+    hist_50,
+    afam_162, -- ge_6
+    nufs_163, -- ge_ud_2_5
+    pols_102 -- us_3
   }
 
 def fall_27 : Finset CourseRegistration :=
   courses_taken fall_2027 {
+    cmpe_195a,
+    engr_195a,
+    cmpe_127,
     cmpe_140,
-    cmpe_142,
-    cmpe_146,
-    cmpe_152,
-    afam_162,
-    nufs_163
+    cmpe_142
+    -- cmpe_152,
   }
 
 def spring_28 : Finset CourseRegistration :=
   courses_taken spring_2028 {
-    engr_100w,
-    cmpe_195a,
-    engr_195a,
-    pols_102
-  }
-
-def fall_28 : Finset CourseRegistration :=
-  courses_taken fall_2028 {
     cmpe_195b,
-    engr_195b
+    engr_195b,
+    cmpe_146,
+    engr_100w,
+    cmpe_148
   }
 
 def current_plan : Plan := {
@@ -106,7 +102,6 @@ def current_plan : Plan := {
     ∪ spring_27
     ∪ fall_27
     ∪ spring_28
-    ∪ fall_28
 }
 
 set_option maxRecDepth 10000
