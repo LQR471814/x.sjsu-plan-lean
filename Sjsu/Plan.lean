@@ -2,7 +2,9 @@ import Mathlib.Data.Finset.Basic
 import Sjsu.Types
 import Sjsu.Courses
 import Sjsu.Semesters
-import Sjsu.Requirements
+import Sjsu.Requirements.GE
+import Sjsu.Requirements.Sem
+import Sjsu.Requirements.CMPE
 
 def courses_taken (sem : Semester) (courses : Finset Course) :=
   Finset.image
@@ -109,17 +111,37 @@ def current_plan : Plan := {
     ∪ spring_28
 }
 
-set_option maxRecDepth 10000
+theorem current_plan.ges : Requirements.GeneralEducation current_plan := {
+  req_units := by native_decide
+  req_wid := by native_decide
+  req_core := {
+    req_1a := by native_decide
+    req_1c := by native_decide
+    req_2 := by native_decide
+    req_3a := by native_decide
+    req_3b := by native_decide
+    req_4 := by native_decide
+    req_5a := by native_decide
+    req_5b := by native_decide
+    req_5c := by native_decide
+    req_6 := by native_decide
+  }
+  req_ud := {
+    req_1 := by native_decide
+    req_2 := by native_decide
+    req_3 := by native_decide
+    req_4 := by native_decide
+  }
+  req_us := {
+    req_1 := by native_decide
+    req_2 := by native_decide
+    req_3 := by native_decide
+    req_4 := by native_decide
+  }
+}
 
-theorem current_plan_ges : ge_req_met current_plan := by
-  rw [ge_req_met, ge_core_req, ge_req_ud, ge_req_us]
-  repeat
-    constructor
-    decide
-  decide
-
-theorem current_plan_cmpe : cmpe_req_met current_plan := by
-  constructor
-  · decide
-  · decide
+theorem current_plan_cmpe : Requirements.CMPE.Major current_plan := {
+  req_courses := by native_decide
+  req_electives := by native_decide
+}
 

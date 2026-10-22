@@ -1,5 +1,6 @@
 import Mathlib.Data.Finset.Basic
 import Mathlib.Data.Finset.Image
+import Mathlib.Algebra.BigOperators.Group.Finset.Basic
 
 -- logical predicate types:
 -- 1. courses (bool flag)
@@ -43,3 +44,13 @@ def add (r : CourseRegistration) (p : Plan) : Plan :=
 def get_course (r : CourseRegistration) := r.course
 def course_regs (sr : Finset CourseRegistration) : Finset Course :=
   Finset.image get_course sr
+
+def cat_units (cat : Set Course) (p : Plan) [DecidablePred (· ∈ cat)] :=
+  let courses : Finset Course := course_regs p.taken
+  let present : Finset Course := Finset.filter (· ∈ cat) courses
+  Finset.sum present (·.units)
+
+def sem_units (sem : Semester) (p : Plan) :=
+  let sem_reg := Finset.filter (·.sem = sem) p.taken
+  Finset.sum sem_reg (·.course.units)
+
