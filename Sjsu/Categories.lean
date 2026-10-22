@@ -56,7 +56,8 @@ def ge_5c : Finset Course := {
   trld_5a_5c
 }
 def ge_6 : Finset Course := {
-  afam_162
+  afam_162,
+  ccs_25
 }
 def us1 : Finset Course := {
   hist_20b
@@ -65,7 +66,8 @@ def us2 : Finset Course := {
   trai_us2_trld_4
 }
 def us3 : Finset Course := {
-  pols_102
+  pols_102,
+  hist_189b
 }
 def ge_ud_2 : Finset Course := {
   nufs_163
@@ -76,6 +78,7 @@ def ge_ud_3 : Finset Course := {
   engr_195b
 }
 def ge_ud_4 : Finset Course := {
+  nufs_114b,
   ee_198a,
   cmpe_195a,
   engr_195a

@@ -59,38 +59,42 @@ def fall_26 : Finset CourseRegistration :=
     math_32,
     cmpe_70,
     cmpe_110,
-    -- cmpe_124,
+    -- cmpe_124, (removed)
     cmpe_126
   }
 
 def spring_27 : Finset CourseRegistration :=
   courses_taken spring_2027 {
+    cmpe_152, -- elective (compiler design)
+    cmpe_138, -- elective (database systems)
+    cmpe_188, -- elective (machine learning)
     cmpe_125,
-    -- cmpe_130,
     cmpe_131,
-    hist_50,
-    afam_162, -- ge_6
-    nufs_163, -- ge_ud_2_5
-    pols_102 -- us_3
+    engr_100w
+  }
+
+def summer_27 : Finset CourseRegistration :=
+  courses_taken summer_2027 {
+    hist_189b, -- us_3
+    ccs_25, -- ge_6
+    nufs_163 -- ge_ud_2_5
   }
 
 def fall_27 : Finset CourseRegistration :=
   courses_taken fall_2027 {
-    cmpe_195a,
+    cmpe_195a, -- senior design (also GE UD 4)
     engr_195a,
-    cmpe_127,
-    cmpe_140,
-    cmpe_142
-    -- cmpe_152,
+    cmpe_127, -- microproc design
+    cmpe_140, -- computer architecture
+    cmpe_142 -- operating systems
   }
 
 def spring_28 : Finset CourseRegistration :=
   courses_taken spring_2028 {
     cmpe_195b,
     engr_195b,
-    cmpe_146,
-    engr_100w,
-    cmpe_148
+    cmpe_148, -- computer networks I
+    cmpe_146 -- real-time embedded
   }
 
 def current_plan : Plan := {
@@ -100,16 +104,22 @@ def current_plan : Plan := {
     ∪ spring_26
     ∪ fall_26
     ∪ spring_27
+    ∪ summer_27
     ∪ fall_27
     ∪ spring_28
 }
 
 set_option maxRecDepth 10000
 
-theorem current_plan_works :
-  gen_req_met current_plan
-  ∧ cmpe_req_courses ⊆ course_regs current_plan.taken
-:= by
-  -- (first | tac1 | tac2 | ...) tries tactics until one works
-  repeat' (first | constructor | decide)
+theorem current_plan_ges : ge_req_met current_plan := by
+  rw [ge_req_met, ge_core_req, ge_req_ud, ge_req_us]
+  repeat
+    constructor
+    decide
+  decide
+
+theorem current_plan_cmpe : cmpe_req_met current_plan := by
+  constructor
+  · decide
+  · decide
 

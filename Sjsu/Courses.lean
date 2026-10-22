@@ -1,7 +1,7 @@
 import Mathlib.Data.Finset.Basic
 import Sjsu.Types
 
-def biol_10 : Course := { name := "BIOL 10", units := 3 }
+def biol_10 : Course := { name := "The Living World", units := 3 }
 def chem_1a : Course := { name := "CHEM 1A", units := 5 }
 def ise_130 : Course := { name := "ISE 130", units := 3 }
 def phys_50 : Course := { name := "PHYS 50", units := 4 }
@@ -11,14 +11,14 @@ def mate_153 : Course := { name := "MATE 153", units := 3 }
 def phys_130 : Course := { name := "PHYS 130", units := 3 }
 def phys_140 : Course := { name := "PHYS 140", units := 3 }
 
-def math_30 : Course := { name := "MATH 30", units := 3 }
-def math_31 : Course := { name := "MATH 31", units := 4 }
-def math_32 : Course := { name := "MATH 32", units := 3 }
-def math_39 : Course := { name := "MATH 39", units := 3 }
-def math_42 : Course := { name := "MATH 42", units := 3 }
-def math_33a : Course := { name := "MATH 33A", units := 3 }
-def math_33la : Course := { name := "MATH 33LA", units := 3 }
-def math_50 : Course := { name := "MATH 50", units := 2 }
+def math_30 : Course := { name := "Calculus I", units := 3 }
+def math_31 : Course := { name := "Calculus II", units := 4 }
+def math_32 : Course := { name := "Calculus III", units := 3 }
+def math_39 : Course := { name := "Linear Algebra I", units := 3 }
+def math_42 : Course := { name := "Discrete Mathematics", units := 3 }
+def math_33a : Course := { name := "ODE for SCI & ENGR", units := 3 }
+def math_33la : Course := { name := "Diffeq and Linalg", units := 3 }
+def math_50 : Course := { name := "Scientific Computing I", units := 2 }
 def math_108 : Course := { name := "MATH 108", units := 3 }
 def math_112 : Course := { name := "MATH 112", units := 3 }
 def math_115 : Course := { name := "MATH 115", units := 3 }
@@ -53,12 +53,13 @@ def cs_22b : Course := { name := "CS 22B", units := 3 }
 def cs_46a : Course := { name := "CS 46A", units := 4 }
 def cs_49a : Course := { name := "CS 49A", units := 3 }
 def cs_49j : Course := { name := "CS 49J", units := 3 }
+def se_139 : Course := { name := "FundamDataMining", units := 3 }
 
 def ee_30 : Course := { name := "EE 30", units := 3 }
 def ee_97 : Course := { name := "EE 97", units := 1 }
 def ee_98 : Course := { name := "EE 98", units := 3 }
 def ee_102 : Course := { name := "EE 102", units := 3 }
-def ee_110 : Course := { name := "EE 110", units := 3 }
+def ee_110 : Course := { name := "EE 110", units := 4 }
 def ee_110l : Course := { name := "EE 110L", units := 1 }
 def ee_112 : Course := { name := "EE 112", units := 3 }
 def ee_118 : Course := { name := "EE 118", units := 4 }
@@ -72,38 +73,58 @@ def ee_140 : Course := { name := "EE 140", units := 3 }
 def ee_198a : Course := { name := "EE 198A", units := 1 }
 def ee_198b : Course := { name := "EE 198B", units := 3 }
 
-def cmpe_30 : Course := { name := "CMPE 30", units := 3 }
-def cmpe_50 : Course := { name := "CMPE 50", units := 3 }
+def cmpe_30 : Course := { name := "CMPE 30", units := 4 }
+def cmpe_50 : Course := { name := "CMPE 50", units := 4 }
 def cmpe_70 : Course := { name := "CMPE 70", units := 3 }
-def cmpe_110 : Course := { name := "CMPE 110", units := 3 }
-def cmpe_124 : Course := { name := "CMPE 124", units := 3 }
-def cmpe_125 : Course := { name := "CMPE 125", units := 3 }
+def cmpe_102 : Course := { name := "CMPE 102", units := 3 }
+def cmpe_110 : Course := { name := "CMPE 110", units := 4 }
+def cmpe_125 : Course := { name := "CMPE 125", units := 4 }
 def cmpe_126 : Course := { name := "CMPE 126", units := 3 }
 def cmpe_127 : Course := { name := "CMPE 127", units := 3 }
 def cmpe_130 : Course := { name := "CMPE 130", units := 3 }
 def cmpe_131 : Course := { name := "CMPE 131", units := 3 }
-def cmpe_140 : Course := { name := "CMPE 140", units := 3 }
-def cmpe_142 : Course := { name := "CMPE 142", units := 3 }
-def cmpe_146 : Course := { name := "CMPE 146", units := 3 }
-def cmpe_148 : Course := { name := "CMPE 148", units := 3 }
-def cmpe_152 : Course := { name := "CMPE 152", units := 3 }
-def cmpe_195a : Course := { name := "CMPE 195A", units := 2 }
-def cmpe_195b : Course := { name := "CMPE 195B", units := 3 }
+def cmpe_132 : Course := { name := "Inf Security", units := 3 }
+def cmpe_133 : Course := { name := "Soft Eng II", units := 3 }
+def cmpe_135 : Course := { name := "Obj Orient Anl Des", units := 3 }
+def cmpe_137 : Course := { name := "Mobile Softwr Engr", units := 3 }
+def cmpe_138 : Course := { name := "Database Systems I", units := 3 }
+def cmpe_139 : Course := { name := "FundamDataMining", units := 3 }
+def cmpe_140 : Course := { name := "Computer Arch. and Design", units := 3 }
+def cmpe_142 : Course := { name := "OS Design", units := 3 }
+def cmpe_146 : Course := { name := "RT Embedded System Co-Design", units := 3 }
+def cmpe_148 : Course := { name := "Computer Networks I", units := 3 }
+def cmpe_152 : Course := { name := "Compiler Design", units := 3 }
+def cmpe_163 : Course := { name := "Intro CG & AR", units := 3 }
+def cmpe_165 : Course := { name := "SW Eng Process Mng", units := 3 }
+def cmpe_172 : Course := { name := "Enterprise Software", units := 3 }
+def cmpe_181 : Course := { name := "IoT Platforms", units := 3 }
+def cmpe_182 : Course := { name := "IoT Security", units := 3 }
+def cmpe_183 : Course := { name := "Crypto & Blockchain", units := 3 }
+def cmpe_184 : Course := { name := "Human-Cent CyberSec", units := 3 }
+def cmpe_185 : Course := { name := "Auto Mobile Robots", units := 3 }
+def cmpe_187 : Course := { name := "Soft Quality Engr", units := 3 }
+def cmpe_188 : Course := { name := "Machine Learn/BD", units := 3 }
+def cmpe_189 : Course := { name := "Spcl Topics in CmpE", units := 3 }
+def cmpe_195a : Course := { name := "CMPE Sr. Design I", units := 2 }
+def cmpe_195b : Course := { name := "CMPE Sr. Design II", units := 3 }
 
-def engr_10 : Course := { name := "ENGR 10", units := 3 }
-def engr_195a : Course := { name := "ENGR 195A", units := 1 }
-def engr_195b : Course := { name := "ENGR 195B", units := 1 }
-def engr_100w : Course := { name := "ENGR 100W", units := 3 }
-def cs_100w : Course := { name := "CS 100W", units := 3 }
-def phys_100w : Course := { name := "PHYS 100W", units := 3 }
+def engr_10 : Course := { name := "Intro to Engineering", units := 3 }
+def engr_195a : Course := { name := "ENGR Sr. Design I", units := 1 }
+def engr_195b : Course := { name := "ENGR Sr. Design II", units := 1 }
+def engr_100w : Course := { name := "Writing in Disciplines (ENGR)", units := 3 }
+def cs_100w : Course := { name := "Writing in Disciplines (CS)", units := 3 }
+def phys_100w : Course := { name := "Writing in Disciplines (PHYS)", units := 3 }
 
 def engl_1a : Course := { name := "ENGL 1A", units := 3 }
 def engl_1b : Course := { name := "ENGL 1B", units := 3 }
-def comm_20 : Course := { name := "COMM 20", units := 3 }
-def hist_50 : Course := { name := "HIST 50", units := 3 }
+def comm_20 : Course := { name := "Public Speaking", units := 3 }
+def hist_50 : Course := { name := "Understanding Historical Reasoning", units := 3 }
 def afam_162 : Course := { name := "AFAM 162", units := 3 }
-def nufs_163 : Course := { name := "NUFS 163", units := 3 }
+def ccs_25 : Course := { name := "Changing Majority", units := 3 }
+def nufs_114b : Course := { name := "Community Nutrition", units := 3 }
+def nufs_163 : Course := { name := "Science of Physical Fitness and Nutrition", units := 3 }
 def pols_102 : Course := { name := "POLS 102", units := 4 }
+def hist_189b : Course := { name := "HIST 189B", units := 4 }
 
 def arth_70a : Course := { name := "ARTH 70A", units := 3 }
 def arth_70b : Course := { name := "ARTH 70B", units := 3 }
