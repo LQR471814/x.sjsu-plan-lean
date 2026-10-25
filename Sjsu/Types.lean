@@ -28,6 +28,12 @@ structure Semester where
   idx : Nat
   deriving DecidableEq
 
+instance : LE Semester where
+  le a b := a.idx ≤ b.idx
+
+instance : LT Semester where
+  lt a b := a.idx < b.idx
+
 structure CourseRegistration where
   course : Course
   sem : Semester
@@ -38,10 +44,15 @@ structure Plan where
   taken : Finset CourseRegistration
   deriving DecidableEq
 
+-- the plan before a particular semester
+def Plan.before (sem : Semester) (p : Plan) : Plan :=
+  { p with taken := p.taken.filter (fun cr => cr.sem < sem) }
+
 def add (r : CourseRegistration) (p : Plan) : Plan :=
   { p with taken := insert r p.taken }
 
 def get_course (r : CourseRegistration) := r.course
+
 def course_regs (sr : Finset CourseRegistration) : Finset Course :=
   Finset.image get_course sr
 

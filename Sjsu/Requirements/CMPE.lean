@@ -55,8 +55,12 @@ def ud_electives : Finset Course := {
   se_139
 }
 
-structure Major (p : Plan) where
-  req_courses : req_courses ⊆ course_regs p.taken
-  req_electives : cat_units ud_electives p ≥ 7
+def Major (p : Plan) : Prop :=
+  req_courses ⊆ course_regs p.taken
+  ∧ cat_units ud_electives p ≥ 7
+
+instance (p : Plan) : Decidable (Major p) := by
+  rw [Major]
+  infer_instance
 
 end Requirements.CMPE

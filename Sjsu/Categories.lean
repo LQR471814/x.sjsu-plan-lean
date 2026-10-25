@@ -97,7 +97,8 @@ def lower_div : Finset Course :=
   us1 ∪ us2 ∪ us3
 
 -- note: ge upper div area 1 doesn't exist I guess
-def upper_div : Finset Course := ge_ud_2 ∪ ge_ud_3 ∪ ge_ud_4 ∪ ge_ud_5
+def upper_div : Finset Course :=
+  ge_ud_2 ∪ ge_ud_3 ∪ ge_ud_4 ∪ ge_ud_5
 
 def wid : Finset Course := {
   engr_100w,
