@@ -1,13 +1,36 @@
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Sort
-import Mathlib.Data.String.Basic
-import Sjsu.Types
-import Sjsu.Courses
-import Sjsu.Semesters
-import Sjsu.Requirements.GE
-import Sjsu.Requirements.Sem
-import Sjsu.Requirements.CMPE
-import Sjsu.Requirements.Prereqs
+module
+
+-- runtime imports (for executable `def`s like `current_plan`, `sortByKey`)
+public import Mathlib.Data.Finset.Basic
+public import Mathlib.Data.Finset.Sort
+public import Mathlib.Data.String.Basic
+public import Mathlib.Data.Set.Basic
+public import Mathlib.Data.Fintype.Defs
+public import Mathlib.Order.Basic
+public import Sjsu.Types
+public import Sjsu.Courses
+public import Sjsu.Semesters
+public import Sjsu.Requirements.GE
+public import Sjsu.Requirements.Sem
+public import Sjsu.Requirements.CMPE
+public import Sjsu.Requirements.Prereqs
+
+-- meta imports (lift runtime code to the meta phase for `native_decide`)
+meta import Mathlib.Data.Finset.Basic
+meta import Mathlib.Data.Finset.Sort
+meta import Mathlib.Data.String.Basic
+meta import Mathlib.Data.Set.Basic
+meta import Mathlib.Data.Fintype.Defs
+meta import Mathlib.Order.Basic
+meta import Sjsu.Types
+meta import Sjsu.Courses
+meta import Sjsu.Semesters
+meta import Sjsu.Requirements.GE
+meta import Sjsu.Requirements.Sem
+meta import Sjsu.Requirements.CMPE
+meta import Sjsu.Requirements.Prereqs
+
+@[expose] public section
 
 def courses_taken (sem : Semester) (courses : Finset Course) :=
   Finset.image

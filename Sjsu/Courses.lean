@@ -1,5 +1,9 @@
-import Mathlib.Data.Finset.Basic
-import Sjsu.Types
+module
+
+public import Mathlib.Data.Finset.Basic
+public import Sjsu.Types
+
+@[expose] public section
 
 def biol_10 : Course := { name := "The Living World", units := 3 }
 def chem_1a : Course := { name := "CHEM 1A", units := 5 }

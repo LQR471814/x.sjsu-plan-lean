@@ -1,6 +1,10 @@
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Finset.Image
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+module
+
+public import Mathlib.Data.Finset.Basic
+public import Mathlib.Data.Finset.Image
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+
+@[expose] public section
 
 -- logical predicate types:
 -- 1. courses (bool flag)

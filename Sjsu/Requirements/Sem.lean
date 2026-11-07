@@ -1,4 +1,8 @@
-import Sjsu.Semesters
+module
+
+public import Sjsu.Semesters
+
+@[expose] public section
 
 def Requirements.Semesters (p : Plan) : Prop :=
   sem_units fall_2025 p ≤ 17

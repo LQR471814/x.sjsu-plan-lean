@@ -1,4 +1,8 @@
-import Sjsu.Types
+module
+
+public import Sjsu.Types
+
+@[expose] public section
 
 def before_college : Semester := { name := "BEFORE_COLLEGE", unit_capacity := 999, idx := 0 }
 def fall_2025 : Semester := { name := "FALL_2025", unit_capacity := 17, idx := 1 }

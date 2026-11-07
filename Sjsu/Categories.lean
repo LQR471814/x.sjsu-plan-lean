@@ -1,7 +1,11 @@
-import Mathlib.Data.Set.Basic
-import Mathlib.Data.Finset.Basic
-import Sjsu.Types
-import Sjsu.Courses
+module
+
+public import Mathlib.Data.Set.Basic
+public import Mathlib.Data.Finset.Basic
+public import Sjsu.Types
+public import Sjsu.Courses
+
+@[expose] public section
 
 def ge_1a : Finset Course := {
   engl_1a

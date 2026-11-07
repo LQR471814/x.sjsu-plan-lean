@@ -1,6 +1,10 @@
-import Sjsu.Types
-import Sjsu.Courses
-import Sjsu.Requirements.GE
+module
+
+public import Sjsu.Types
+public import Sjsu.Courses
+public import Sjsu.Requirements.GE
+
+@[expose] public section
 
 namespace Requirements
 

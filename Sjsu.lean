@@ -1,1 +1,3 @@
-import Sjsu.Plan
+module
+
+public import Sjsu.Plan

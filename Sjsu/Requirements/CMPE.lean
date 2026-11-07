@@ -1,4 +1,8 @@
-import Sjsu.Categories
+module
+
+public import Sjsu.Categories
+
+@[expose] public section
 
 namespace Requirements.CMPE
 
