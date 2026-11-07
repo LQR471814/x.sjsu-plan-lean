@@ -7,13 +7,18 @@ defaultTargets = ["Sjsu"]
 pp.unicode.fun = true # pretty-prints `fun a ↦ b`
 relaxedAutoImplicit = false
 weak.linter.mathlibStandardSet = true
-weak.linter.style.nativeDecide = false
+# project uses mathlib but is not a mathlib contribution; disable the
+# mathlib style conventions that do not apply here:
+#   - header: copyright / module-docstring convention
+#   - native: native_decide is intentional for fast plan checks
+linter.style.header = false
+linter.style.native = false
 maxSynthPendingDepth = 3
 
 [[require]]
 name = "mathlib"
 scope = "leanprover-community"
-rev = "v4.29.0-rc6"
+rev = "v4.35.0"
 
 [[lean_lib]]
 name = "Sjsu"
