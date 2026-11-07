@@ -70,7 +70,7 @@ def fall_26 : Finset CourseRegistration :=
 
 def spring_27 : Finset CourseRegistration :=
   courses_taken spring_2027 {
-    cmpe_152, -- elective (compiler design)
+    cmpe_130, -- elective (advanced algorithms and datastructures)
     cmpe_138, -- elective (database systems)
     cmpe_188, -- elective (machine learning)
     cmpe_125,

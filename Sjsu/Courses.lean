@@ -81,7 +81,7 @@ def cmpe_110 : Course := { name := "CMPE 110", units := 4 }
 def cmpe_125 : Course := { name := "CMPE 125", units := 4 }
 def cmpe_126 : Course := { name := "CMPE 126", units := 3 }
 def cmpe_127 : Course := { name := "CMPE 127", units := 3 }
-def cmpe_130 : Course := { name := "CMPE 130", units := 3 }
+def cmpe_130 : Course := { name := "Advanced Algorithms and Datastructures", units := 3 }
 def cmpe_131 : Course := { name := "CMPE 131", units := 3 }
 def cmpe_132 : Course := { name := "Inf Security", units := 3 }
 def cmpe_133 : Course := { name := "Soft Eng II", units := 3 }
